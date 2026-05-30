@@ -115,6 +115,8 @@ a {
 }
 
 .mobile-menu summary {
+  position: relative;
+  z-index: 61;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -126,6 +128,9 @@ a {
   background: rgba(9, 12, 13, 0.78);
   cursor: pointer;
   list-style: none;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
 .mobile-menu summary::-webkit-details-marker {
@@ -137,24 +142,59 @@ a {
   width: 20px;
   height: 2px;
   background: var(--ink);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.mobile-menu[open] summary {
+  border-color: rgba(82, 185, 255, 0.58);
+  background: rgba(17, 140, 240, 0.18);
+}
+
+.mobile-menu[open] summary span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu[open] summary span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu[open] summary span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu[open]::before {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(4, 7, 8, 0.68);
+  backdrop-filter: blur(10px);
+  content: "";
 }
 
 .mobile-menu-panel {
-  position: absolute;
-  top: calc(100% - 6px);
-  right: clamp(18px, 4vw, 48px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
   display: grid;
-  min-width: min(280px, calc(100vw - 36px));
-  border: 1px solid rgba(243, 240, 232, 0.18);
-  background: rgba(9, 12, 13, 0.96);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.38);
+  align-content: start;
+  width: min(360px, calc(100vw - 26px));
+  min-height: 100dvh;
+  padding: 96px 18px 24px;
+  border-left: 1px solid rgba(82, 185, 255, 0.22);
+  background:
+    linear-gradient(180deg, rgba(17, 140, 240, 0.14), transparent 38%),
+    rgba(9, 12, 13, 0.98);
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.48);
 }
 
 .mobile-menu-panel a {
-  padding: 16px 18px;
+  padding: 18px 2px;
   border-bottom: 1px solid rgba(243, 240, 232, 0.12);
   color: rgba(243, 240, 232, 0.86);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -253,10 +293,10 @@ h2 {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 620px;
   margin-bottom: 18px;
-  font-size: clamp(2.8rem, 6.4vw, 5.8rem);
-  line-height: 1;
+  font-size: clamp(2.2rem, 4.8vw, 4.2rem);
+  line-height: 1.05;
 }
 
 .tagline {
@@ -540,40 +580,71 @@ h3 {
 }
 
 .site-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 76px);
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
   width: min(var(--max), calc(100% - 36px));
   margin: 0 auto;
-  padding: 34px 0 42px;
+  padding: 32px 0 44px;
   border-top: 1px solid var(--line);
 }
 
 .footer-brand {
-  display: block;
-  width: clamp(166px, 18vw, 240px);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 355px);
 }
 
-.footer-brand img {
+.footer-emblem {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+}
+
+.footer-lockup {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.footer-emblem img,
+.footer-lockup img {
   display: block;
   width: 100%;
   height: auto;
 }
 
 .footer-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 12px 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  gap: 18px clamp(28px, 5vw, 58px);
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-contact div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.footer-contact span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .footer-contact a {
   color: rgba(243, 240, 232, 0.78);
-  font-size: 0.82rem;
+  font-size: clamp(0.82rem, 1vw, 0.94rem);
   font-weight: 750;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 860px) {
@@ -624,13 +695,20 @@ h3 {
     max-width: 440px;
   }
 
+  h1 {
+    max-width: 520px;
+    font-size: clamp(2.05rem, 10vw, 3.45rem);
+  }
+
   .site-footer {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .footer-contact {
+    grid-template-columns: 1fr;
     justify-content: flex-start;
+    width: 100%;
   }
 
   .capability-panel,
@@ -662,6 +740,18 @@ h3 {
   .hero-actions,
   .button {
     width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(1.95rem, 11vw, 2.85rem);
+  }
+
+  .mobile-menu-panel {
+    width: min(330px, calc(100vw - 20px));
+  }
+
+  .footer-brand {
+    width: min(100%, 305px);
   }
 
   .maintenance-list div {

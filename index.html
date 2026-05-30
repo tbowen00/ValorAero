@@ -221,13 +221,34 @@
       </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-brand" href="#top" aria-label="ValorAero Advisors home">
-        <img src="assets/Wordmark.png" alt="ValorAero Advisors" />
-      </a>
+      <div class="footer-brand-group">
+        <a class="footer-brand" href="#top" aria-label="ValorAero Advisors home">
+          <span class="footer-emblem" aria-hidden="true">
+            <img src="assets/Logo.png" alt="" />
+          </span>
+          <span class="footer-lockup">
+            <img src="assets/Wordmark.png" alt="ValorAero Advisors" />
+          </span>
+        </a>
+      </div>
       <div class="footer-contact">
-        <a href="mailto:contact@valoraeroadvisors.com">contact@valoraeroadvisors.com</a>
-        <a href="tel:14054094026">405-409-4026</a>
+        <div>
+          <span>Email</span>
+          <a href="mailto:contact@valoraeroadvisors.com">contact@valoraeroadvisors.com</a>
+        </div>
+        <div>
+          <span>Phone</span>
+          <a href="tel:14054094026">405-409-4026</a>
+        </div>
       </div>
     </footer>
+    <script>
+      const mobileMenu = document.querySelector(".mobile-menu");
+      mobileMenu?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.open = false;
+        });
+      });
+    </script>
   </body>
 </html>
