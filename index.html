@@ -1,208 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valor Aviation | Mission-Ready Aviation Support</title>
-    <meta
-      name="description"
-      content="Valor Aviation provides government contracting, aircraft maintenance, ISR integrations, aviation engineering support, and high-reliability mission operations."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header" aria-label="Primary navigation">
-      <a class="brand-mark" href="#top" aria-label="Valor Aviation home">
-        <span class="brand-emblem" aria-hidden="true">
-          <img src="assets/valor-aviation-logo.svg" alt="" />
-        </span>
-        <span>
-          <strong>Valor Aviation</strong>
-          <small>Mission Support</small>
-        </span>
-      </a>
-      <nav class="site-nav">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#maintenance">Maintenance</a>
-        <a href="#engineering">ISR & Engineering</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AeroValor Advisors — premium private charter, aircraft management, and acquisition advisory.">
+    <title>AeroValor Advisors | Private Aviation, Elevated</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/aerovalor-advisors-logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="#home" class="nav__logo">
+                <img src="assets/aerovalor-advisors-logo.svg" alt="AeroValor Advisors" class="nav__logo-img">
+                <span class="nav__logo-text">AeroValor Advisors</span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav__cta">Request Access</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow">Private Aviation, Elevated</p>
+            <h1 class="hero__title">AeroValor Advisors</h1>
+            <p class="hero__subtitle">Bespoke private charter, aircraft management, and acquisition advisory for those who measure time in moments, not minutes.</p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">Request Access</a>
+                <a href="#services" class="btn btn--ghost">Explore Services</a>
+            </div>
+        </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-image" aria-hidden="true"></div>
-        <div class="hero-grid">
-          <div class="mission-ribbon" aria-label="Mission status">
-            <span>Ops status</span>
-            <strong>Ready</strong>
-          </div>
-          <div class="hero-content">
-            <p class="eyebrow">Government contracting • aviation sustainment • ISR support</p>
-            <h1 id="hero-title">Valor Aviation</h1>
-            <p class="tagline">Precision. Integrity. Mission-Ready Solutions.</p>
-            <p class="hero-copy">
-              Specialized government contracting and business development support for aircraft
-              maintenance, ISR integrations, aviation engineering, and high-reliability mission
-              operations.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#contact">Contact Valor Aviation</a>
-              <a class="button secondary" href="#capabilities">View Capabilities</a>
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="section__head">
+            <p class="section__eyebrow">What We Offer</p>
+            <h2 class="section__title">A Standard Without Compromise</h2>
+        </div>
+        <div class="services__grid">
+            <article class="service-card">
+                <div class="service-card__icon">✈</div>
+                <h3 class="service-card__title">Private Charter</h3>
+                <p class="service-card__text">Access an elite fleet of meticulously maintained aircraft, ready to depart on your schedule, anywhere in the world.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-card__icon">◆</div>
+                <h3 class="service-card__title">Aircraft Management</h3>
+                <p class="service-card__text">Comprehensive oversight of your aircraft — crew, maintenance, compliance, and operations handled with precision.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-card__icon">❖</div>
+                <h3 class="service-card__title">Acquisition Advisory</h3>
+                <p class="service-card__text">Expert guidance through aircraft acquisition — from sourcing and inspection to closing and delivery.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about__media">
+            <img src="assets/aerovalor-advisors-hangar.png" alt="AeroValor Advisors private jet in hangar" class="about__img">
+        </div>
+        <div class="about__content">
+            <p class="section__eyebrow">Who We Are</p>
+            <h2 class="section__title">Aviation as a Private Privilege</h2>
+            <p class="about__text">AeroValor Advisors was founded on a singular belief: that air travel should be an extension of one's standards, not a compromise of them. We serve a discerning clientele who expect discretion, reliability, and uncompromising excellence.</p>
+            <p class="about__text">From first inquiry to final descent, every detail is considered, every expectation exceeded.</p>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat">
+            <p class="stat__number">250+</p>
+            <p class="stat__label">Aircraft in Network</p>
+        </div>
+        <div class="stat">
+            <p class="stat__number">40+</p>
+            <p class="stat__label">Countries Served</p>
+        </div>
+        <div class="stat">
+            <p class="stat__number">24/7</p>
+            <p class="stat__label">Concierge Support</p>
+        </div>
+        <div class="stat">
+            <p class="stat__number">15yrs</p>
+            <p class="stat__label">Of Excellence</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact__inner">
+            <p class="section__eyebrow">Begin the Conversation</p>
+            <h2 class="section__title">Request Private Access</h2>
+            <p class="contact__text">Membership is by inquiry. Share your details and a member of our team will respond within 24 hours.</p>
+            <form class="contact__form" onsubmit="return false;">
+                <div class="form__row">
+                    <input type="text" placeholder="Full Name" class="form__input" required>
+                    <input type="email" placeholder="Email Address" class="form__input" required>
+                </div>
+                <input type="text" placeholder="How may we assist you?" class="form__input" required>
+                <button type="submit" class="btn btn--primary btn--full">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <img src="assets/aerovalor-advisors-logo.svg" alt="AeroValor Advisors" class="footer__logo">
+                <span class="footer__brand-text">AeroValor Advisors</span>
             </div>
-          </div>
-          <aside class="flight-log" aria-label="Operational profile">
-            <div>
-              <span>Sector</span>
-              <strong>Federal / Defense / Aviation</strong>
+            <p class="footer__copy">© 2026 AeroValor Advisors · valoraeroadvisors.com · All rights reserved.</p>
+            <div class="footer__links">
+                <a href="#services" class="footer__link">Services</a>
+                <a href="#about" class="footer__link">About</a>
+                <a href="#contact" class="footer__link">Contact</a>
             </div>
-            <div>
-              <span>Focus</span>
-              <strong>Maintenance, ISR, engineering</strong>
-            </div>
-            <div>
-              <span>Standard</span>
-              <strong>Compliant, precise, accountable</strong>
-            </div>
-          </aside>
         </div>
-      </section>
+    </footer>
 
-      <section class="intro-band" aria-label="Company overview">
-        <div class="section-number">00 / Profile</div>
-        <p>
-          Valor Aviation supports clients where schedule, certification, technical judgment, and
-          operational trust carry real consequence. The work is quiet, exacting, and built around
-          mission continuity.
-        </p>
-      </section>
-
-      <section class="section capabilities" id="capabilities" aria-labelledby="capabilities-title">
-        <div class="section-heading">
-          <p class="section-number">01 / Capabilities</p>
-          <h2 id="capabilities-title">Built like a mission board, not a sales deck.</h2>
-        </div>
-        <div class="mission-board">
-          <article class="capability-panel primary-panel">
-            <span class="panel-code">VA-01</span>
-            <h3>Government Contracting & Business Development</h3>
-            <p>
-              Capture strategy, teaming support, pursuit discipline, and client positioning for
-              aviation and defense-focused opportunities.
-            </p>
-          </article>
-          <article class="capability-panel">
-            <span class="panel-code">VA-02</span>
-            <h3>Aircraft Maintenance & Technical Services</h3>
-            <p>
-              Practical maintenance support for aircraft readiness, inspections, repairs,
-              modifications, and mission-specific platform needs.
-            </p>
-          </article>
-          <article class="capability-panel">
-            <span class="panel-code">VA-03</span>
-            <h3>ISR Integrations</h3>
-            <p>
-              Integration support for sensors, mission systems, avionics packages, and operational
-              configurations that demand technical control.
-            </p>
-          </article>
-          <article class="capability-panel">
-            <span class="panel-code">VA-04</span>
-            <h3>Engineering Support</h3>
-            <p>
-              Coordination with experienced engineers and certification professionals for compliant
-              repairs, installations, and technical decisions.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section maintenance" id="maintenance" aria-labelledby="maintenance-title">
-        <div class="maintenance-copy">
-          <p class="section-number">02 / Aircraft Maintenance</p>
-          <h2 id="maintenance-title">Readiness depends on disciplined technical work.</h2>
-          <p>
-            Valor Aviation supports maintenance programs that require speed without shortcuts,
-            documentation without ambiguity, and workmanship that holds up under operational demand.
-          </p>
-        </div>
-        <div class="maintenance-list" aria-label="Aircraft maintenance services">
-          <div>
-            <span>01</span>
-            <strong>Offsite repairs</strong>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>Aircraft inspections</strong>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Modifications and upgrades</strong>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>Specialized maintenance for mission-specific platforms</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section engineering" id="engineering" aria-labelledby="engineering-title">
-        <div class="schematic-frame">
-          <div class="schematic-rule"></div>
-          <div class="schematic-node node-a"></div>
-          <div class="schematic-node node-b"></div>
-          <div class="schematic-node node-c"></div>
-        </div>
-        <div class="engineering-copy">
-          <p class="section-number">03 / ISR & Engineering</p>
-          <h2 id="engineering-title">Certified support for complex aircraft integrations.</h2>
-          <p>
-            Valor Aviation works with experienced engineers, DERs, and DARs to support compliant,
-            certified repairs, installations, and integrations. From ISR systems to aviation
-            engineering support, the focus remains clear: build correctly, document thoroughly, and
-            keep the mission moving.
-          </p>
-          <div class="engineering-meta">
-            <span>DER / DAR coordination</span>
-            <span>Installation support</span>
-            <span>Certified repair pathways</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="values" aria-labelledby="values-title">
-        <div class="section-heading">
-          <p class="section-number">04 / Code</p>
-          <h2 id="values-title">The standard is carried into every engagement.</h2>
-        </div>
-        <div class="code-list">
-          <div><span>Honor</span></div>
-          <div><span>Integrity</span></div>
-          <div><span>Service</span></div>
-          <div><span>Excellence</span></div>
-        </div>
-      </section>
-
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div>
-          <p class="section-number">05 / Contact</p>
-          <h2 id="contact-title">Ready support for serious aviation missions.</h2>
-          <p>
-            For contracting, maintenance, ISR integration, or engineering support requirements,
-            contact Valor Aviation to discuss the mission profile and path forward.
-          </p>
-        </div>
-        <a class="button primary contact-button" href="mailto:contact@valoraviation.com">
-          Contact Valor Aviation
-        </a>
-      </section>
-    </main>
-  </body>
+    <script>
+        // Smooth scroll for nav links
+        const navLinks = document.querySelectorAll('.nav__links a, .nav__cta, .hero__actions a, .footer__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                const targetId = link.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
 </html>
