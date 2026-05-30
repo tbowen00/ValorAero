@@ -124,7 +124,7 @@ a {
   background:
     linear-gradient(90deg, rgba(9, 12, 13, 0.92) 0%, rgba(9, 12, 13, 0.62) 38%, rgba(9, 12, 13, 0.16) 72%),
     linear-gradient(180deg, rgba(9, 12, 13, 0.24) 0%, rgba(9, 12, 13, 0.4) 58%, #090c0d 100%),
-    url("assets/valor-aviation-hangar.png") center right / cover no-repeat;
+    url("assets/aerovalor-advisors-hangar.png") center right / cover no-repeat;
 }
 
 .hero::before,
@@ -559,7 +559,7 @@ h3 {
     background:
       linear-gradient(90deg, rgba(9, 12, 13, 0.95), rgba(9, 12, 13, 0.48)),
       linear-gradient(180deg, rgba(9, 12, 13, 0.2), #090c0d),
-      url("assets/valor-aviation-hangar.png") 58% center / cover no-repeat;
+      url("assets/aerovalor-advisors-hangar.png") 58% center / cover no-repeat;
   }
 
   .hero-actions,
