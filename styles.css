@@ -61,32 +61,24 @@ a {
 .brand-emblem {
   display: grid;
   flex: 0 0 auto;
-  width: clamp(40px, 5.2vw, 56px);
-  height: clamp(40px, 5.2vw, 56px);
+  width: clamp(38px, 4.8vw, 54px);
+  height: clamp(38px, 4.8vw, 54px);
   place-items: center;
-  border: 1px solid rgba(243, 240, 232, 0.42);
-  background: rgba(17, 23, 23, 0.74);
 }
 
 .brand-emblem img {
   display: block;
-  width: 86%;
-  height: 86%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.brand-mark strong,
-.brand-mark small {
+.brand-lockup {
   display: block;
+  width: clamp(162px, 17vw, 235px);
+  min-width: 0;
 }
 
-.brand-mark strong {
-  font-size: clamp(0.82rem, 2vw, 0.98rem);
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
-.brand-mark small,
 .site-nav a,
 .eyebrow,
 .section-number,
@@ -100,6 +92,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.brand-lockup img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
@@ -201,8 +199,13 @@ h2 {
 h1 {
   max-width: 760px;
   margin-bottom: 18px;
-  font-size: clamp(4.1rem, 12vw, 9.8rem);
   line-height: 0.92;
+}
+
+h1 img {
+  display: block;
+  width: min(760px, 100%);
+  height: auto;
 }
 
 .tagline {
@@ -499,13 +502,8 @@ h3 {
     max-width: min(72vw, 320px);
   }
 
-  .brand-mark span:last-child {
-    min-width: 0;
-  }
-
-  .brand-mark strong,
-  .brand-mark small {
-    overflow-wrap: anywhere;
+  .brand-lockup {
+    width: clamp(152px, 48vw, 224px);
   }
 
   .hero-grid,
@@ -526,10 +524,6 @@ h3 {
   .mission-ribbon {
     position: static;
     width: fit-content;
-  }
-
-  h1 {
-    font-size: clamp(3.6rem, 18vw, 6.5rem);
   }
 
   .flight-log {
