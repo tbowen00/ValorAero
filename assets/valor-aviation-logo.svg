@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Valor Aviation logo</title>
+  <desc id="desc">A shield-shaped aviation mark with a precision flight path and wing form.</desc>
+  <defs>
+    <linearGradient id="metal" x1="28" y1="18" x2="132" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3f0e8"/>
+      <stop offset=".42" stop-color="#9aa39f"/>
+      <stop offset="1" stop-color="#d0a05a"/>
+    </linearGradient>
+    <linearGradient id="field" x1="28" y1="20" x2="132" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1c2724"/>
+      <stop offset="1" stop-color="#0b0f10"/>
+    </linearGradient>
+  </defs>
+  <path d="M80 10 130 30v42c0 34-18 60-50 78-32-18-50-44-50-78V30L80 10Z" fill="#0b0f10"/>
+  <path d="M80 16 124 34v38c0 29-15 52-44 69-29-17-44-40-44-69V34L80 16Z" fill="url(#field)" stroke="url(#metal)" stroke-width="4"/>
+  <path d="M31 70h98" stroke="#65746a" stroke-width="3" stroke-linecap="square" opacity=".72"/>
+  <path d="M80 35 49 116h16l15-42 15 42h16L80 35Z" fill="url(#metal)"/>
+  <path d="M58 80h44l-9 14H67l-9-14Z" fill="#0b0f10" opacity=".82"/>
+  <path d="M44 67c22-13 50-13 72 0-17-2-30 2-36 10-6-8-19-12-36-10Z" fill="#c8974d"/>
+  <path d="M104 43c14 10 23 25 23 42" fill="none" stroke="#c8974d" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <circle cx="127" cy="86" r="5" fill="#9f4a3e"/>
+</svg>
