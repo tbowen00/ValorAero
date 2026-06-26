@@ -9,9 +9,9 @@
   --green: #6f7d66;
   --green-dark: #334038;
   --steel: #8d9694;
-  --accent: #118cf0;
-  --accent-light: #52b9ff;
-  --red: #9f4a3e;
+  --accent: #b40000;
+  --accent-light: #d6a51c;
+  --red: #c8102e;
   --max: 1180px;
 }
 
@@ -62,8 +62,8 @@ a {
 .brand-emblem {
   display: grid;
   flex: 0 0 auto;
-  width: clamp(38px, 4.8vw, 54px);
-  height: clamp(38px, 4.8vw, 54px);
+  width: clamp(42px, 5vw, 58px);
+  height: clamp(42px, 5vw, 58px);
   place-items: center;
 }
 
@@ -76,7 +76,7 @@ a {
 
 .brand-lockup {
   display: block;
-  width: clamp(162px, 17vw, 235px);
+  width: clamp(174px, 18vw, 260px);
   min-width: 0;
 }
 
@@ -148,8 +148,8 @@ a {
 }
 
 .mobile-menu[open] summary {
-  border-color: rgba(82, 185, 255, 0.58);
-  background: rgba(17, 140, 240, 0.18);
+  border-color: rgba(214, 165, 28, 0.58);
+  background: rgba(180, 0, 0, 0.18);
 }
 
 .mobile-menu[open] summary span:first-child {
@@ -183,9 +183,9 @@ a {
   width: min(360px, calc(100vw - 26px));
   min-height: 100dvh;
   padding: 96px 18px 24px;
-  border-left: 1px solid rgba(82, 185, 255, 0.22);
+  border-left: 1px solid rgba(214, 165, 28, 0.22);
   background:
-    linear-gradient(180deg, rgba(17, 140, 240, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(180, 0, 0, 0.14), transparent 38%),
     rgba(9, 12, 13, 0.98);
   box-shadow: -24px 0 70px rgba(0, 0, 0, 0.48);
 }
@@ -232,7 +232,7 @@ a {
 .hero::before {
   inset: 112px clamp(18px, 4vw, 48px) 44px;
   border: 1px solid rgba(243, 240, 232, 0.16);
-  border-left-color: rgba(17, 140, 240, 0.46);
+  border-left-color: rgba(180, 0, 0, 0.46);
 }
 
 .hero::after {
@@ -240,7 +240,7 @@ a {
   bottom: 44px;
   width: min(42vw, 520px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(17, 140, 240, 0.86), transparent);
+  background: linear-gradient(90deg, transparent, rgba(214, 165, 28, 0.86), transparent);
 }
 
 .hero-grid {
@@ -258,6 +258,28 @@ a {
 
 .hero-content {
   max-width: 680px;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 22px);
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+
+.hero-brand-icon {
+  flex: 0 0 auto;
+  width: clamp(72px, 10vw, 118px);
+  height: clamp(72px, 10vw, 118px);
+  object-fit: contain;
+}
+
+.hero-brand-wordmark {
+  display: block;
+  width: min(100%, 500px);
+  height: auto;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.38));
 }
 
 .mission-ribbon {
@@ -333,7 +355,7 @@ h1 {
 }
 
 .button.primary {
-  border-color: rgba(82, 185, 255, 0.8);
+  border-color: rgba(214, 165, 28, 0.8);
   background: var(--accent);
   color: #ffffff;
 }
@@ -422,7 +444,7 @@ h2 {
 
 .primary-panel {
   min-height: 340px;
-  background: linear-gradient(135deg, rgba(17, 140, 240, 0.18), rgba(17, 23, 23, 0));
+  background: linear-gradient(135deg, rgba(180, 0, 0, 0.18), rgba(17, 23, 23, 0));
 }
 
 .panel-code {
@@ -454,7 +476,7 @@ h3 {
 }
 
 .maintenance-list {
-  border-top: 2px solid rgba(17, 140, 240, 0.76);
+  border-top: 2px solid rgba(180, 0, 0, 0.76);
 }
 
 .maintenance-list div {
@@ -485,7 +507,7 @@ h3 {
   background:
     linear-gradient(rgba(243, 240, 232, 0.07) 1px, transparent 1px) 0 0 / 28px 28px,
     linear-gradient(90deg, rgba(243, 240, 232, 0.07) 1px, transparent 1px) 0 0 / 28px 28px,
-    radial-gradient(circle at 72% 28%, rgba(17, 140, 240, 0.2), transparent 28%),
+    radial-gradient(circle at 72% 28%, rgba(180, 0, 0, 0.2), transparent 28%),
     rgba(17, 23, 23, 0.58);
 }
 
@@ -599,9 +621,9 @@ h3 {
 
 .footer-emblem {
   display: grid;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
   place-items: center;
 }
 
@@ -668,7 +690,7 @@ h3 {
   }
 
   .brand-lockup {
-    width: clamp(152px, 48vw, 224px);
+    width: clamp(168px, 50vw, 238px);
   }
 
   .hero-grid,
@@ -744,6 +766,20 @@ h3 {
 
   h1 {
     font-size: clamp(1.95rem, 11vw, 2.85rem);
+  }
+
+  .hero-brand {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-brand-icon {
+    width: clamp(58px, 18vw, 82px);
+    height: clamp(58px, 18vw, 82px);
+  }
+
+  .hero-brand-wordmark {
+    width: min(100%, 285px);
   }
 
   .mobile-menu-panel {

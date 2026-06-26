@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Valor Aero Consulting wordmark</title>
+  <desc id="desc">The words Valor Aero Consulting in a metallic uppercase style.</desc>
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f7f4"/>
+      <stop offset="0.18" stop-color="#bfc0bc"/>
+      <stop offset="0.44" stop-color="#f2f2ee"/>
+      <stop offset="0.72" stop-color="#8d8f8d"/>
+      <stop offset="1" stop-color="#d9dad6"/>
+    </linearGradient>
+    <filter id="bevel" x="-4%" y="-10%" width="108%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="3" flood-color="#000000" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="-2" stdDeviation="1.5" flood-color="#ffffff" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <g filter="url(#bevel)" fill="url(#steel)" stroke="#1c1d1d" stroke-width="3" paint-order="stroke fill">
+    <text x="68" y="268" font-family="Arial Black, Impact, Inter, system-ui, sans-serif" font-size="186" font-weight="900" letter-spacing="14">VALOR AERO</text>
+    <text x="94" y="418" font-family="Inter, Arial, system-ui, sans-serif" font-size="94" font-weight="300" letter-spacing="46">CONSULTING</text>
+  </g>
+</svg>
